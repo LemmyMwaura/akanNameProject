@@ -10,13 +10,20 @@ form.addEventListener("submit", (event) => {
     const year = document.getElementById('year').value
     const genderInput = document.querySelector('input[name="gender"]:checked').value
 
+
+    if (date > 31 || date <= 0 ){
+        alert("Enter correct value")
+    } 
+    if (month > 12 || month <= 0 ){
+        alert("Enter correct value")
+    } 
+
     console.log(date)
     console.log(month)
     console.log(year)
     console.log(genderInput)
 })
 
-console.log(date)
 
 // function runCode(){
 //     let enterDate = prompt("Enter Date")
