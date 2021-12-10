@@ -57,9 +57,39 @@ function checkGender() {
 } 
 
 function pickFemaleAkam() {
-    return 123
+    switch(dayOfTheWeek) {
+        case 0:
+            return "Ama"
+        case 1:
+            return "Akosua"
+        case 2:
+            return "Adwoa"
+        case 3:
+            return "Abenaa"
+        case 4:
+            return "Akua"
+        case 5:
+            return "Yaa"
+        case 6:
+            return "Afua"
+    }  
 }
 
 function pickMaleAkam() {
-    return 123
+    switch(dayOfTheWeek) {
+        case 0:
+            return "Kwame"
+        case 1:
+            return "Kwasi"
+        case 2:
+            return "Kwadwo"
+        case 3:
+            return "Kwabena"
+        case 4:
+            return "Kwaku"
+        case 5:
+            return "Yaw"
+        case 6:
+            return "Kofi"
+    } 
 }
