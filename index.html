@@ -13,16 +13,29 @@
     <main>
         <section>
             <div class="form">
-                    <div class="sidebar"> Information </div> 
+                    <div class="sidebar"> Instructions
+                    </div> 
                     <div class="mainbar">
+                        <form id="form">
+                            <div class="birthday">
+                                <input type="text" id="date" placeholder="Date">
+                                <input type="text" id="month" placeholder="Month">
+                                <input type="text" id="year" placeholder="Year">
+                            </div>
 
-                        <div class="Birthday">
-                            <input type="text" placeholder="Date">
-                            <input type="text" placeholder="Month">
-                            <input type="text" placeholder="Year">
-                        </div>
-                        <!-- <input type ="date"> -->
-                        <input type="radio">
+                            <!-- <input type ="date"> -->
+                            <div class="radio-buttons">
+                                <label for="Male">Male
+                                    <input type="radio" id="Male" name="gender" value="Male">
+                                </label><br>
+
+                                <label for="Female">Female
+                                    <input type="radio" id="Female" name="gender" value="Female">
+                                </label><br>                             
+                            </div>
+
+                            <input id="submit" type="submit" value="Submit"></input>
+                        </form>
                     </div>
             </div>      
         </section>

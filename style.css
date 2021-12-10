@@ -9,16 +9,35 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10rem;
 }
 
 .sidebar{
     background: #3b2392;
+    border-radius: 20px 0 0 20px;
     padding: 2rem;
-    max-width: 500px;
+    max-width: 600px;
+    height: 100%;
+    color: #fff;
 }
 
 .mainbar{
-    background: #f9f9fa;
+    background: #cbcbd3;
+    border-radius:0 20px 20px 0;
     padding: 2rem;
     max-width: 700px;
+    height: 100%;
+}
+
+.birthday{  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+    width: 100%; 
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.radio-buttons{
+    margin-top: 1rem;
+    padding: 0rem;
 }
