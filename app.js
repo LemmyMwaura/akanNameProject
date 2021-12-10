@@ -10,14 +10,10 @@ form.addEventListener("submit", (event) => {
     const male = document.querySelector("#male")
     const female = document.querySelector("#female")
 
-    checkValidity()
-    checkGender()
-    
-    console.log(date)
-    console.log(month)
-    console.log(year)
+    // checkValidity()
+    // checkGender()
+    calcDayOfWeek()
 })
-
 
 function checkValidity() {
     if (date.value.length == 0 && month.value.length == 0) {
@@ -38,9 +34,14 @@ function checkValidity() {
     }
 }
 
-// function calcDayOfWeek() {
-//     let day = 1
-// }
+function calcDayOfWeek() {     
+    let CC = parseInt(year.value.split("").slice(0,2).join(""))
+    let YY = parseInt(year.value.split("").slice(2).join(""))
+    let MM = parseInt(month.value)
+    let DD = parseInt(date.value)
+
+    let dayOfTheWeek = Math.trunc((((CC/4)-2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
+}
 
 function checkGender() {
     if(female.checked == true) {
