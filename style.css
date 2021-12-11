@@ -1,36 +1,85 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+}
+
+*, ::before, ::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 .container{
-    display: flex;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-content: center;
     justify-content: center;
-    align-items: center;
     height: 100vh;
-    padding: 10rem;
+    padding: 8rem;
+    box-shadow: 15px 25px rgba(0,0,0,.6);
 }
 
 .sidebar{
     background: #3b2392;
     border-radius: 20px 0 0 20px;
     padding: 2rem;
-    max-width: 600px;
-    height: 100%;
+    height: 70vh;
     color: #fff;
 }
 
 .mainbar{
-    background: #cbcbd3;
+    background: #3b2392;
     border-radius:0 20px 20px 0;
     padding: 2rem;
-    max-width: 700px;
-    height: 100%;
+    height: 70vh;
 }
 
+.form{
+    background: #cbcbd3;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+
+}
+
+.birthday{
+    display: grid;
+}
+
+.birthday input{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
 
 .radio-buttons{
-    margin-top: 1rem;
+    margin: 0.5rem;
     padding: 0rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+}
+
+.btn{
+    margin: 0.5rem;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.open{
+    margin: 0;
 }

@@ -11,13 +11,18 @@
 </head>
 <body>
     <main>
-        <section>
+        <section class="hero">
             <div class="container">
-                    <div class="sidebar"> Instructions
+                    <div class="sidebar"> 
+                        <h1>AkanNameGenerator</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere amet. Quam error ad necessitatibus?</p>
+                        <button class="btn open">Instruction Modal</button>
                     </div> 
                     <div class="mainbar">
-                        <form id="form">
+                        <form id="form" class="form">
                             <div class="birthday">
+
+                                <input type="text" id="name" placeholder="Name">
                                 <input type="text" id="date" placeholder="Date">
                                 <input type="text" id="month" placeholder="Month">
                                 <input type="text" id="year" placeholder="Year">
@@ -27,14 +32,14 @@
                             <div class="radio-buttons">
                                 <label for="Male">Male
                                     <input type="radio" id="male" name="gender" value="Male">
-                                </label><br>
+                                </label>
 
                                 <label for="Female">Female
                                     <input type="radio" id="female" name="gender" value="Female">
-                                </label><br>                             
+                                </label>                          
                             </div>
 
-                            <input id="submit" type="submit" value="Submit"></input>
+                            <input id="submit" class="btn" type="submit" value="Submit"></input>
                         </form>
                     </div>
             </div>      
