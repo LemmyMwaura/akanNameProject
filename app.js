@@ -11,7 +11,6 @@ form.addEventListener("submit", (event) => {
     const female = document.querySelector("#female")
 
     checkValidity()
-    checkGender() 
 })
 
 function checkValidity() {
@@ -30,7 +29,7 @@ function checkValidity() {
         } else if (year.value <= 0) {
             alert("Please enter correct Year of Birth")
         } else{
-            calcDayOfWeek()
+             checkGender()
         }
     }
 }
@@ -46,17 +45,17 @@ function calcDayOfWeek() {
 
 function checkGender() {
     if(female.checked == true) {
-        console.log(pickFemaleAkam())
+        console.log(pickFemaleAkam(calcDayOfWeek))
     }
     else if (male.checked == true){
-        console.log(pickMaleAkam())
+        console.log(pickMaleAkam(calcDayOfWeek))
     } else {
         alert("Please select Gender")
     }
 } 
 
-function pickFemaleAkam(calcDayOfWeek) {
-    switch(calcDayOfWeek) {
+function pickFemaleAkam(day) {
+    switch(day()) {
         case 0:
             return "Ama"
         case 1:
@@ -71,13 +70,12 @@ function pickFemaleAkam(calcDayOfWeek) {
             return "Yaa"
         case 6:
             return "Afua"
-        default:
-            return "Hi"
+
     }  
 }
 
-function pickMaleAkam(calcDayOfWeek) {
-    switch(calcDayOfWeek) {
+function pickMaleAkam(day) {
+    switch(day()) {
         case 0:
             return "Kwame"
         case 1:
@@ -92,7 +90,6 @@ function pickMaleAkam(calcDayOfWeek) {
             return "Yaw"
         case 6:
             return "Kofi"
-        default:
-            return "Hi"
     } 
 }
+
