@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
-
+    --green : #470a5a;
+    --main-color: #fff;
+    --main-bg: #fff;
+    --form-bg: #D8B384;
+    --body-color: #7D5A50;
 }
 
 *, ::before, ::after{
@@ -10,8 +14,13 @@
     box-sizing: border-box;
 }
 
-body{
+body,
+input{
     font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--body-color);
 }
 
 .container{
@@ -20,36 +29,43 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-content: center;
     justify-content: center;
+    place-self: center;
     height: 100vh;
-    padding: 8rem;
-    box-shadow: 15px 25px rgba(0,0,0,.6);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .sidebar{
-    background: #3b2392;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: var(--main-bg);
     border-radius: 20px 0 0 20px;
     padding: 2rem;
     height: 70vh;
-    color: #fff;
+    /* color: #fff; */
+}
+
+.message{
+    font-size: 0.8rem;
 }
 
 .mainbar{
-    background: #3b2392;
+    background: var(--main-bg);
     border-radius:0 20px 20px 0;
     padding: 2rem;
     height: 70vh;
 }
 
+
 .form{
-    background: #cbcbd3;
+    background: var(--form-bg);
     border-radius: 20px;
     padding: 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: space-evenly;
-
 }
 
 .birthday{
@@ -58,10 +74,20 @@ body{
 
 .birthday input{
     padding: 0.5rem;
-    margin: 0.5rem;
+    margin: 0.5rem auto;
     width: 100%;
     border: none;
+    outline: none;
     border-radius: 10px;
+    /* border-bottom: 1px solid #bbb; */
+}
+
+.date-of-birth{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .radio-buttons{
@@ -73,13 +99,86 @@ body{
 }
 
 .btn{
-    margin: 0.5rem;
+    /* display: inline-block; */
     border: none;
-    padding: 1.5rem;
-    border-radius: 5px;
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    width: 100%;
+    background: #151111;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.btn:hover{
+    background-color: var(--body-color)
+}
+
+.text{
+    color : black;
+    font-size: 0.7rem;
+    opacity: 0.2;
+}
+
+.text a{
+    color : black;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.carousel{
+    background:var(--form-bg);
+    border-radius: 0.8rem;
+    height: 180px; 
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.text-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: red;
+}
+
+.text-wrap{
+    max-height: 2.2rem;
+    overflow: hidden;
+}
+
+.text-group{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(0);
+}
+
+.text-group h2{
+    line-height: 2.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.bullets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bullets span{
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #aaa;
+    margin: 0 0.25rem;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.open{
-    margin: 0;
+.bullets span.active{
+    width: 1.1rem;
+    background-color: #151111;
+    border-radius: 1rem;
 }

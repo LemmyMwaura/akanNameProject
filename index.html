@@ -14,18 +14,42 @@
         <section class="hero">
             <div class="container">
                     <div class="sidebar"> 
-                        <h1>AkanNameGenerator</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere amet. Quam error ad necessitatibus?</p>
+                        <div class="heading">
+                            <h1>AkanNameGenerator</h1>
+                        </div>
+                        <p class="message"> Akan names come from a traditional naming system for people from Ghana. These Akan names signify the day one is born. According to Akan tradition, each child is born with a name associated to their soul. The day the child is born is therefore determined by the soul.</p>
                         <button class="btn open">Instruction Modal</button>
+                        <!-- <p class="text"> Forgotten your password or your login details </p> -->
+                        <div class="carousel">
+                            <div class="image-wrapper"></div>
+
+                            <div class="text-slider">
+                                <div class="text-wrap">
+                                    <div class="text-group">
+                                        <h2>Enter date of Birth</h2>
+                                        <h2>Pick your Gender</h2>
+                                        <h2>Generate Akan Name</h2>
+                                    </div>
+                                </div>
+                                <div class="bullets">
+                                    <span class="active" data-value="1"></span>
+                                    <span data-value="2"></span>
+                                    <span data-value="3"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                     <div class="mainbar">
-                        <form id="form" class="form">
+                        <form id="form" autocomplete="off" class="form">
+                            <h3>Generate your Akan Name</h3>
+                            <h6 class="text side">Akan Name is an ode to the ghananian culture <a href="#">I wanna know more?</a></h6>
                             <div class="birthday">
-
-                                <input type="text" id="name" placeholder="Name">
-                                <input type="text" id="date" placeholder="Date">
-                                <input type="text" id="month" placeholder="Month">
-                                <input type="text" id="year" placeholder="Year">
+                                <input type="text" id="name" minlength="4" placeholder="Name" required>
+                                <div class="date-of-birth">
+                                    <input type="text" id="date" placeholder="Date" required>
+                                    <input type="text" id="month" placeholder="Month" required>
+                                    <input type="text" id="year" placeholder="Year" required>
+                                </div>
                             </div>
 
                             <!-- <input type ="date"> -->
