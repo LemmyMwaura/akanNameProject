@@ -45,6 +45,14 @@ ___
 #### Outcomes
   Then the app should display the Akan name depending on their gender with a greeting.\
   And the app should refresh.
+
+* [x] User Inputs Date of birth Name and selects Gender (all recquired)
+* [x] Submit button Starts the app.
+* [x] Date of birth validity are done.
+* [x] Akan Name is generated depending on gender and day of birth
+* [x] Alert with the Akan Name and a greeting is displayed to the user.
+---
+___
 ### Links
 
 - Live Site URL: [AkanNameGenerator](https://lemmymwaura.github.io/akanNameProject/)
