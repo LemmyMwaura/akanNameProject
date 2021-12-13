@@ -42,13 +42,13 @@ body{
     padding: 2rem;
     height: 70vh;
     color: var(--font-color);
+    font-weight: 500;
     background: rgba(255,255,255,0.3);
     backdrop-filter: blur(50px);
     border: 2px solid transparent;
     background-clip: padding-box;
-    box-shadow: -10px -10px 10px rgba(45, 55, 68, 0.30),
-                10px 10px 10px rgba(45, 55, 68, 0.30);
-   
+    box-shadow: -10px -10px 10px rgba(45, 55, 68, 0.30);,
+                /* 10px 10px 10px rgba(45, 55, 68, 0.30); */
 }
 
 .message{
