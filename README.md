@@ -3,8 +3,8 @@ AkanNameGenerator project. Built with Javascript.
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
-    - [Project Description](#Project-description) 
     - [Screenshot](#screenshot)
+    - [Project Description](#Project-description) 
     - [Links](#links)
     - [Built with](#built-with)
     - [Contact Information](#contact-information)
@@ -13,6 +13,11 @@ AkanNameGenerator project. Built with Javascript.
 
 ---
 ___
+
+### Screenshot
+![Website](./Images/Website.png)
+___
+---
 ### Project Description
 
 What is an Akan Name?\
@@ -26,10 +31,6 @@ You simply add your name and date of birth, then pick your gender and click the 
 
 **NB** Your Date of birth should be written in the correct format or else you will pass the validity checks.
 
-___
----
-### Screenshot
-![Website](./images/Website.png)
 ---
 ___
 ### Links
