@@ -51,59 +51,38 @@ function checkGender() {
 function pickFemaleAkam(day) {
   switch (day()) {
     case 0:
-      return "you was born on a Saturday your Akan Name is Ama"
+      return "you was born on a Saturday, your Akan Name is Ama"
     case 1:
-      return "you was born on a Sunday your Akan Name is Akosua"
+      return "you was born on a Sunday, your Akan Name is Akosua"
     case 2:
-      return "you was born on a Monday your Akan Name is Adwoa"
+      return "you was born on a Monday, your Akan Name is Adwoa"
     case 3:
-      return "you was born on a Tuesday your Akan Name is Abenaa"
+      return "you was born on a Tuesday, your Akan Name is Abenaa"
     case 4:
-      return "you was born on a Wednesday your Akan Name is Akua"
+      return "you was born on a Wednesday, your Akan Name is Akua"
     case 5:
-      return "you was born on a Thursday your Akan Name is Yaa"
+      return "you was born on a Thursday, your Akan Name is Yaa"
     case 6:
-      return "you was born on a Friday your Akan Name is Afua"
+      return "you was born on a Friday, your Akan Name is Afua"
   }
 }
 
 function pickMaleAkam(day) {
   switch (day()) {
     case 0:
-      return "you was born on a Saturday your Akan Name is Kwame"
+      return "you was born on a Saturday, your Akan Name is Kwame"
     case 1:
-      return "you was born on a Sunday your Akan Name is Kwasi"
+      return "you was born on a Sunday, your Akan Name is Kwasi"
     case 2:
-      return "you was born on a Monday your Akan Name is Kwadwo"
+      return "you was born on a Monday, your Akan Name is Kwadwo"
     case 3:
-      return "you was born on a Tuesday your Akan Name is Kwabena"
+      return "you was born on a Tuesday, your Akan Name is Kwabena"
     case 4:
-      return "you was born on a Wednesday your Akan Name is Kwaku"
+      return "you was born on a Wednesday, your Akan Name is Kwaku"
     case 5:
-      return "you was born on a Thursday your Akan Name is Yaw"
+      return "you was born on a Thursday, your Akan Name is Yaw"
     case 6:
-      return "you was born on a Friday your Akan Name is Kofi"
+      return "you was born on a Friday, your Akan Name is Kofi"
   }
 }
 
-//Container slider
-const bullets = document.querySelectorAll(".bullets span")
-const images = document.querySelectorAll(".image")
-
-bullets.forEach((bullet) => {
-  bullet.addEventListener("click", moveSlider)
-})
-
-function moveSlider() {
-  let index = this.dataset.value
-  let loadingImage = document.querySelector(`.img-${index}`)
-
-  images.forEach((img) => img.classList.remove("show"))
-  loadingImage.classList.add("show")
-
-  const textSlider = document.querySelector(".text-group")
-  textSlider.style.transform = `translateY(${index - 1 * 2.2}rem)`
-
-  bullets.forEach((bullet) => bullet.classList.remove("active"))
-  this.classList.add("active")
-}
