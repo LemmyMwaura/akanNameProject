@@ -7,28 +7,22 @@ form.addEventListener("submit", (event) => {
   const year = document.getElementById("year").value
   const male = document.querySelector("#male")
   const female = document.querySelector("#female")
- 
+
   checkValidity()
 })
 
-
 function checkValidity(event) {
-  
-    if (date.value > 31 || date.value <= 0) {
-      alert("Enter the correct date value")
-    }
-    else if (month.value > 12 || month.value <= 0) {
-      alert("Enter the correct month value")
-    } 
-    else if (year.value > 2021) {
-      alert("You cannot be born in the future")
-    }
-     else if (year.value <= 0) {
-      alert("Please enter correct Year of Birth")
-    } 
-    else {
-      checkGender()
-    }
+  if (date.value > 31 || date.value <= 0) {
+    alert("Enter the correct date value")
+  } else if (month.value > 12 || month.value <= 0) {
+    alert("Enter the correct month value")
+  } else if (year.value > 2021) {
+    alert("You cannot be born in the future")
+  } else if (year.value <= 0) {
+    alert("Please enter correct Year of Birth")
+  } else {
+    checkGender()
+  }
 }
 
 function calcDayOfWeek() {
@@ -46,9 +40,9 @@ function checkGender() {
   const name = document.querySelector("#name").value
 
   if (female.checked == true) {
-    alert(`Hi ${name}, your AkanName is ${pickFemaleAkam(calcDayOfWeek)}`)
+    alert(`Hi ${name},${pickFemaleAkam(calcDayOfWeek)}`)
   } else if (male.checked == true) {
-    alert(`Hi ${name}, your AkanName is ${pickMaleAkam(calcDayOfWeek)}`)
+    alert(`Hi ${name}, ${pickMaleAkam(calcDayOfWeek)}`)
   } else {
     alert("Please select Gender")
   }
@@ -57,41 +51,59 @@ function checkGender() {
 function pickFemaleAkam(day) {
   switch (day()) {
     case 0:
-      return "Ama"
+      return "you was born on a Saturday your Akan Name is Ama"
     case 1:
-      return "Akosua"
+      return "you was born on a Sunday your Akan Name is Akosua"
     case 2:
-      return "Adwoa"
+      return "you was born on a Monday your Akan Name is Adwoa"
     case 3:
-      return "Abenaa"
+      return "you was born on a Tuesday your Akan Name is Abenaa"
     case 4:
-      return "Akua"
+      return "you was born on a Wednesday your Akan Name is Akua"
     case 5:
-      return "Yaa"
+      return "you was born on a Thursday your Akan Name is Yaa"
     case 6:
-      return "Afua"
+      return "you was born on a Friday your Akan Name is Afua"
   }
 }
 
 function pickMaleAkam(day) {
   switch (day()) {
     case 0:
-      return "Kwame"
+      return "you was born on a Saturday your Akan Name is Kwame"
     case 1:
-      return "Kwasi"
+      return "you was born on a Sunday your Akan Name is Kwasi"
     case 2:
-      return "Kwadwo"
+      return "you was born on a Monday your Akan Name is Kwadwo"
     case 3:
-      return "Kwabena"
+      return "you was born on a Tuesday your Akan Name is Kwabena"
     case 4:
-      return "Kwaku"
+      return "you was born on a Wednesday your Akan Name is Kwaku"
     case 5:
-      return "Yaw"
+      return "you was born on a Thursday your Akan Name is Yaw"
     case 6:
-      return "Kofi"
+      return "you was born on a Friday your Akan Name is Kofi"
   }
 }
 
 //Container slider
-const bullets = document.querySelectorAll('.bullets span');
-const images = document.querySelectorAll('.image')
+const bullets = document.querySelectorAll(".bullets span")
+const images = document.querySelectorAll(".image")
+
+bullets.forEach((bullet) => {
+  bullet.addEventListener("click", moveSlider)
+})
+
+function moveSlider() {
+  let index = this.dataset.value
+  let loadingImage = document.querySelector(`.img-${index}`)
+
+  images.forEach((img) => img.classList.remove("show"))
+  loadingImage.classList.add("show")
+
+  const textSlider = document.querySelector(".text-group")
+  textSlider.style.transform = `translateY(${index - 1 * 2.2}rem)`
+
+  bullets.forEach((bullet) => bullet.classList.remove("active"))
+  this.classList.add("active")
+}

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
-    --green : #470a5a;
+    --green : #0488e0;
     --main-color: #fff;
     --main-bg: #fff;
     --form-bg: #D8B384;
@@ -26,30 +26,33 @@ body{
 .container{
     display: grid;
     gap: 0;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-content: center;
     justify-content: center;
     place-self: center;
     height: 100vh;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .sidebar{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    background: var(--main-bg);
+    justify-content: space-between;
+    background: var(--green);
     border-radius: 20px 0 0 20px;
     padding: 2rem;
     height: 70vh;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .message{
     font-size: 0.8rem;
 }
 
+.items{
+    font-size: 0.8rem;
+}
 .mainbar{
     background: var(--main-bg);
     border-radius:0 20px 20px 0;
@@ -129,10 +132,40 @@ body{
 .carousel{
     background:var(--form-bg);
     border-radius: 0.8rem;
-    height: 180px; 
+    /* height: 180px;  */
     padding: 2rem;
     display: grid;
+    overflow: hidden;
     grid-template-rows: auto 1fr;
+}
+
+.image-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.image{
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.5s;
+}
+
+.img-1{
+    transform: translate(0, -50px);
+}
+.img-2{
+    transform: scale(0.4, 0.5);
+}
+.img-3{
+    transform: scale(0.3) rotate(-20deg);
+}
+
+.image.show{
+    opacity: 1;
+    transform: none;
 }
 
 .text-slider{
@@ -140,12 +173,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    background-color: red;
 }
 
 .text-wrap{
     max-height: 2.2rem;
+    font-size: 0.8rem;
     overflow: hidden;
+    background-color: green;
 }
 
 .text-group{
@@ -153,6 +187,8 @@ body{
     flex-direction: column;
     text-align: center;
     transform: translateY(0);
+    transition: 0.5s;
+    background-color:red;
 }
 
 .text-group h2{
@@ -175,6 +211,7 @@ body{
     margin: 0 0.25rem;
     border-radius: 50%;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .bullets span.active{
