@@ -2,13 +2,12 @@
 AkanNameGenerator project. Built with Javascript.
 
 ## Table of contents
-  - [Table of contents](#table-of-contents)
-    - [Screenshot](#screenshot)
-    - [Project Description](#Project-description) 
-    - [Links](#links)
-    - [Built with](#built-with)
-    - [Contact Information](#contact-information)
-    - [License & Copywright Information](#License-and-Copywright-Information)
+  - [Screenshot](#screenshot)
+  - [Project Description](#Project-description) 
+  - [Links](#links)
+  - [Built with](#built-with)
+  - [Contact Information](#contact-information)
+  - [License & Copywright Information](#License-and-Copywright-Information)
   - [Author](#author)
 
 ---
@@ -29,10 +28,23 @@ The project is just simple akan name generator that calculates the day of the we
 How does it work?\
 You simply add your name and date of birth, then pick your gender and click the submit button. It will then generate your day of birth e.g(Monday, tuesday e.t.c) then give you your Akan Name respective of that.
 
-**NB** Your Date of birth should be written in the correct format or else you will pass the validity checks.
+**NB** Your Date of birth should be written in the correct format or else you will not pass the validity checks.
 
 ---
 ___
+
+### BDD
+ #### Context
+   Given that the user adds his date of birth and name\
+      And the date is valid\
+      And the month is valid\
+      And the year is valid\
+      And the gender was selected
+ #### Event
+  When the User clicks the submit button
+#### Outcomes
+  Then the app should display the Akan name depending on their gender with a greeting.\
+  And the app should refresh.
 ### Links
 
 - Live Site URL: [AkanNameGenerator](https://lemmymwaura.github.io/akanNameProject/)
@@ -46,24 +58,36 @@ ___
   - Flexbox
   - Grid
   - Media Queries (Mobile responsive)
-- Javascript (Vanilla)
+- Javascript (ES6+)
   ```javascript
   //Example
-    switch (day) {
-    case 0:
-      return "you was born on a Saturday your Akan Name is Ama"
+  //Get day Function
+    return Math.trunc(
+    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7
+  )
   ```
 ---
 ___
 ### Contact Information
+
+| Name   | Email               |
+|--------|---------------------|
+| Email  | lemmymwaura@gmail.com |
+| Twitter| lemmyMwaura |
+| Github | [lemmyMwaura](https://github.com/LemmyMwaura) |
 ---
 ___
 ### License and Copywright Information
+(c) Stephen Lemmy Mwaura, Software Engineer.
+
+Licensed under the [MIT License](LISENCE)
 ---
 ___
 ## Author 
+Hi there, I'm Lemmy and i love to code. Connect With me:
 
-- Website - [lemmyMwaura](https://lemmymwaura.github.io/akanNameProject/)
-- Github - [@lemmyMwaura](https://github.com/LemmyMwaura)
+- 💻 Project Website - [Akan Name](https://lemmymwaura.github.io/akanNameProject/)
+- 🎱 Github - [@lemmyMwaura](https://github.com/LemmyMwaura)
+
 ---
 ___

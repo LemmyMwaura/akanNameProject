@@ -3,7 +3,6 @@
 :root{
     --main-bg: rgba(255,255,255,0.1);
     --form-bg: rgba(255,255,255, 0.6);
-    --body-color: #7D5A50;
     --font-color: #426696;
 }
 
@@ -157,6 +156,7 @@ input[type='radio']{
     width: 49%;
     gap: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 input[type='radio']:checked + label {
@@ -186,7 +186,7 @@ input[type='radio']:checked + label {
 .text{
     color : black;
     font-size: 0.7rem;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .side{
@@ -196,7 +196,7 @@ input[type='radio']:checked + label {
 .text a{
     color : black;
     font-size: 0.7rem;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 

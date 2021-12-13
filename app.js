@@ -4,16 +4,13 @@ form.addEventListener("submit", (event) => {
   const date = document.getElementById("date").value
   const month = document.getElementById("month").value
   const year = document.getElementById("year").value
-  const male = document.querySelector("#male")
-  const female = document.querySelector("#female")
-
-  console.log(date,month,year)
+  
   checkValidity()
 })
 
 function checkValidity() {
   if (date.value > 31 || date.value <= 0) {
-    alert("Enter the correct date value")
+   alert("Enter the correct date value")
   } else if (month.value > 12 || month.value <= 0) {
     alert("Enter the correct month value")
   } else if (year.value > 2021) {
@@ -38,9 +35,11 @@ function calcDayOfWeek() {
 
 function checkGender() {
   const name = document.querySelector("#name").value
+  const male = document.querySelector("#male")
+  const female = document.querySelector("#female")
 
   if (female.checked == true) {
-    alert(`Hi ${name},${pickFemaleAkam(calcDayOfWeek)}`)
+    alert(`Hi ${name}, ${pickFemaleAkam(calcDayOfWeek)}`)
   } else if (male.checked == true) {
     alert(`Hi ${name}, ${pickMaleAkam(calcDayOfWeek)}`)
   } else {
