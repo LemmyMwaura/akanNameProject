@@ -2,10 +2,10 @@
 
 :root{
     --green : #0488e0;
-    --main-color: #fff;
-    --main-bg: #fff;
-    --form-bg: #D8B384;
+    --main-bg: rgba(255,255,255,0.1);
+    --form-bg: rgba(255,255,255, 0.6);
     --body-color: #7D5A50;
+    --font-color: #426696;
 }
 
 *, ::before, ::after{
@@ -20,7 +20,7 @@ input{
 }
 
 body{
-    background: var(--body-color);
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 }
 
 .container{
@@ -29,7 +29,6 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-content: center;
     justify-content: center;
-    place-self: center;
     height: 100vh;
     max-width: 900px;
     margin: 0 auto;
@@ -39,11 +38,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--green);
     border-radius: 20px 0 0 20px;
     padding: 2rem;
     height: 70vh;
-    color: #fff;
+    color: var(--font-color);
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: -10px -10px 10px rgba(45, 55, 68, 0.30),
+                10px 10px 10px rgba(45, 55, 68, 0.30);
+   
 }
 
 .message{
@@ -58,6 +63,13 @@ body{
     border-radius:0 20px 20px 0;
     padding: 2rem;
     height: 70vh;
+    color: var(--font-color);
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.30),
+               10px -10px 10px rgba(45, 55, 68, 0.30);
 }
 
 
