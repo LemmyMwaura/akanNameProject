@@ -210,13 +210,15 @@ input[type='radio']:checked + label {
 
     .sidebar{
         border-radius: 0;
-        box-shadow: 0;
+        box-shadow: none;
         border: 0;
+        min-height: auto;
     }
 
     .mainbar{
         border-radius: 0;
-        box-shadow: 0;
+        box-shadow: none;
         border: 0;
+        height: auto;
     }
 }

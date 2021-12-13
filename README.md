@@ -43,8 +43,9 @@ ___
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- Grid
+  - Flexbox
+  - Grid
+  - Media Queries (Mobile responsive)
 - Javascript (Vanilla)
   ```javascript
   //Example
