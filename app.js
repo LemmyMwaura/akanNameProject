@@ -7,10 +7,11 @@ form.addEventListener("submit", (event) => {
   const male = document.querySelector("#male")
   const female = document.querySelector("#female")
 
-  checkValidity(date, month, year)
+  console.log(date,month,year)
+  checkValidity()
 })
 
-function checkValidity(date, month, year) {
+function checkValidity() {
   if (date.value > 31 || date.value <= 0) {
     alert("Enter the correct date value")
   } else if (month.value > 12 || month.value <= 0) {
@@ -25,8 +26,8 @@ function checkValidity(date, month, year) {
 }
 
 function calcDayOfWeek() {
-  let CC = parseInt(year.value.split("").slice(0, 2).join(""))
-  let YY = parseInt(year.value.split("").slice(2).join(""))
+  let CC = parseInt(year.value.toString().split("").slice(0, 2).join(""))
+  let YY = parseInt(year.value.toString().split("").slice(2).join(""))
   let MM = parseInt(month.value)
   let DD = parseInt(date.value)
 
