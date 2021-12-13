@@ -1,4 +1,3 @@
-const submit = document.getElementById("submit")
 const form = document.getElementById("form")
 
 form.addEventListener("submit", (event) => {
@@ -8,10 +7,10 @@ form.addEventListener("submit", (event) => {
   const male = document.querySelector("#male")
   const female = document.querySelector("#female")
 
-  checkValidity()
+  checkValidity(date, month, year)
 })
 
-function checkValidity(event) {
+function checkValidity(date, month, year) {
   if (date.value > 31 || date.value <= 0) {
     alert("Enter the correct date value")
   } else if (month.value > 12 || month.value <= 0) {
