@@ -4,13 +4,13 @@ form.addEventListener("submit", (event) => {
   const date = document.getElementById("date").value
   const month = document.getElementById("month").value
   const year = document.getElementById("year").value
-  
+
   checkValidity()
 })
 
 function checkValidity() {
   if (date.value > 31 || date.value <= 0) {
-   alert("Enter the correct date value")
+    alert("Enter the correct date value")
   } else if (month.value > 12 || month.value <= 0) {
     alert("Enter the correct month value")
   } else if (year.value > 2021) {
@@ -28,8 +28,10 @@ function calcDayOfWeek() {
   let MM = parseInt(month.value)
   let DD = parseInt(date.value)
 
-  return Math.trunc(
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7
+  return Math.abs(
+    Math.trunc(
+      (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7
+    )
   )
 }
 
@@ -47,10 +49,9 @@ function checkGender() {
   }
 }
 
+const femaleNames = ["Ama", "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua"]
+const maleNames = ["Kwame","Kwadwo","Kwadwo","Kwabena","Kwaku","Yaw","Kofi"]
 
-const femaleNames  = ['Ama', 'Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua']
-const maleNames  = ['Kwame', 'Kwadwo', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi']
- 
 function pickFemaleAkam(calcDayOfday) {
   switch (calcDayOfday()) {
     case 0:
@@ -88,4 +89,3 @@ function pickMaleAkam(day) {
       return `you was born on a Friday, your Akan Name is ${maleNames[6]}`
   }
 }
-
